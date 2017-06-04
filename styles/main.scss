@@ -1,0 +1,519 @@
+$acctwell-green: #25a25a;
+$acctwell-mouse-green: #197640;
+$white: #fff;
+$black: #000;
+
+$card-hover-green: rgba(37, 162, 90, .35);
+$jumbotron-gradient: rgba(0, 0, 0, .45);
+
+// HTML ELEMENTS
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  padding-top: 60px;
+}
+
+// FONT AND TEXT
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p,
+div {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+
+h1 {
+  color: $white;
+  font-size: 280%;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-transform: uppercase;
+  word-spacing: 3px;
+}
+
+h2 {
+  font-size: 200%;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 1px;
+
+  &::after {
+    background-color: $acctwell-green;
+    content: '  ';
+    display: block;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 100px;
+  }
+}
+
+h3 {
+  color: $acctwell-green;
+  font-size: 130%;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.page-heading {
+  padding-top: 60px;
+}
+
+// BOOTSTRAP CLASSES
+
+.about-section .container,
+.services-section .container {
+  padding: 0 150px;
+}
+
+// NAVBAR
+
+nav {
+  font-size: 80%;
+  height: 60px;
+}
+
+.acctwell-nav {
+  background-color: $acctwell-green;
+}
+
+.navbar-light a {
+  color: $white !important;
+}
+
+.navbar-collapse {
+  background-color: $acctwell-green;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  color: $white;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.navbar-logo {
+  height: 40px;
+}
+
+.navigation {
+  margin-right: 30px;
+
+  li {
+    padding-right: 30px;
+  }
+
+  li a:link,
+  li a:visited {
+    border-bottom: 2px solid transparent;
+    color: $white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: border-bottom .2s;
+  }
+
+  li a:hover,
+  li a:active {
+    border-bottom: 2px solid $white;
+  }
+
+  li:last-child {
+    padding-right: 0;
+  }
+}
+
+// JUMBOTRON SECTION
+.jumbotron-section {
+  background-image: linear-gradient($jumbotron-gradient, $jumbotron-gradient), url('../resources/img/jumbotron-img.jpg');
+  background-position: center;
+  background-size: cover;
+
+  .jumbotron {
+    background: transparent;
+    border-radius: 0;
+    height: 600px;
+    padding: 0;
+    position: relative;
+
+    h1 {
+      text-transform: none;
+    }
+  }
+
+  .jumbotron-heading {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .get-in-touch:link,
+  .get-in-touch:visited {
+    background-color: $acctwell-green;
+    border: 3px solid $acctwell-green;
+    border-radius: 60px;
+    color: $white;
+    margin-right: 5px;
+  }
+
+  .get-in-touch:hover,
+  .get-in-touch:active {
+    background-color: $acctwell-mouse-green;
+    border-color: $acctwell-mouse-green;
+  }
+
+  .find-out-more:link,
+  .find-out-more:visited {
+    border: 3px solid $acctwell-green;
+    border-radius: 60px;
+    color: $acctwell-green;
+  }
+
+  .find-out-more:hover,
+  .find-out-more:active {
+    background-color: $acctwell-green;
+    color: $white;
+  }
+}
+
+// HOME SECTION
+
+.home-section {
+  margin-bottom: 100px;
+  padding-top: 40px;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  img {
+    height: 100px;
+    margin-top: 15px;
+  }
+
+  a:link,
+  a:visited {
+    color: $black;
+    text-decoration: none;
+  }
+
+  .col-md-4 {
+    border: 2px solid $acctwell-green;
+    padding: 0;
+    text-align: center;
+
+    p {
+      padding: 0 15px;
+    }
+  }
+
+  .col-md-4:hover {
+    background-color: $card-hover-green;
+    border: 2px solid transparent;
+    transition: border .2s, background-color .2s;
+  }
+
+  .col-md-4:first-child {
+    margin-right: 10px;
+  }
+
+  .col-md-4:last-child {
+    margin-left: 10px;
+  }
+}
+
+.home-image {
+  margin-bottom: 30px;
+}
+
+.home-paragraph {
+  line-height: 150%;
+  margin-bottom: 60px;
+  margin-left: 20%;
+  text-align: center;
+  width: 60%;
+}
+
+// ABOUT SECTION
+
+.about-section-content {
+  padding-bottom: 50px;
+}
+
+.col-sm-heading {
+  padding-bottom: 30px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+// SERVICES SECTION
+
+.services-heading {
+  padding-top: 60px;
+}
+
+.services-section .col-sm-heading {
+  padding-bottom: 50px;
+}
+
+.card-header {
+  text-align: center;
+}
+
+.card-header:hover {
+  background-color: $acctwell-green;
+  color: $white;
+  transition: .2s;
+}
+
+.card a {
+  color: $black;
+  text-decoration: none;
+}
+
+// CONTACT SECTION
+
+.contact-section .col-sm-8 {
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.submit-btn {
+  background-color: $acctwell-green;
+  border-radius: 3px;
+  color: $white;
+  width: 100%;
+
+  &:hover,
+  &:active {
+    background-color: $acctwell-mouse-green;
+    cursor: pointer;
+  }
+}
+
+.map-section-content h3 {
+  margin: 35px;
+  text-align: center;
+}
+
+.map-section-content p {
+  margin-bottom: 5px;
+}
+
+.map {
+  height: 550px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+// FOOTER
+
+footer {
+  background-color: $acctwell-green;
+  color: $white;
+  font-size: 80%;
+  margin-top: 100px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+
+  h3 {
+    color: $white;
+    padding-bottom: 20px;
+  }
+
+  p {
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+
+  .col-md-4 {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.copyright {
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+// Large devices (desktops, 992px and up)
+
+@media (max-width: 1199px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (max-width: 991px) {
+
+  html {
+    font-size: 18px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  // ABOUT SECTION
+  .about-section .container {
+    padding: 0;
+  }
+
+  .col-sm-heading {
+    padding-bottom: 20px;
+    padding-top: 35px;
+  }
+
+  // SERVICES SECTION
+  .services-section .container {
+    padding: 0;
+  }
+
+  // CONTACT SECTION
+  .map {
+    height: 450px;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+
+@media (max-width: 767px) {
+
+  h1 {
+    font-size: 220%;
+  }
+
+  h2 {
+    font-size: 140%;
+  }
+
+  h3 {
+    font-size: 120%;
+  }
+  // HOME SECTION
+  .home-section {
+    .col-md-4:first-child {
+      margin-right: 0;
+    }
+
+    .col-md-4:last-child {
+      margin-left: 0;
+    }
+  }
+
+  .col-md-4 {
+    margin: 20px 0;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+
+@media (max-width: 575px) {
+
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 220%;
+  }
+
+  h2 {
+    font-size: 140%;
+  }
+
+  h3 {
+    font-size: 120%;
+  }
+
+  nav {
+    .container {
+      margin: 0;
+    }
+  }
+
+  .page-heading {
+    padding-top: 30px;
+  }
+
+  .col-sm-heading {
+    padding-bottom: 15px;
+    padding-top: 20px;
+  }
+
+  // HOME SECTION
+  .home-section h2 {
+    margin-bottom: 20px;
+  }
+
+  .home-paragraph {
+    margin-bottom: 30px;
+  }
+
+  .home-section .row {
+    margin: 0;
+  }
+
+  .home-image {
+    margin-bottom: 15px;
+  }
+
+  // ABOUT SECTION
+  .about-section .container {
+    padding: 0 3%;
+  }
+
+  // SERVICES SECTION
+  .services-section .container {
+    padding: 0 3%;
+  }
+
+  // CONTACT SECTION
+  .map {
+    height: 350px;
+  }
+
+  footer {
+    p {
+      font-weight: 400;
+    }
+  }
+}
