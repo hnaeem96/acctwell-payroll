@@ -23,7 +23,9 @@
     "ejs": "^2.5.6",
     "node-sass": "^4.5.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "pingy": "^0.3.0"
+  },
   "keywords": [
     "payroll",
     "services",
